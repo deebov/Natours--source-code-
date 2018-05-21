@@ -1,0 +1,28 @@
+{
+  "name": "forest-awesome-html-site",
+  "description": "It's an awesome HTML website.",
+  "main": "index.js",
+  "authors": [
+    "Dilshod Turobov (deebov)"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "pug",
+    "sass",
+    "gulp",
+    "awesome",
+    "html",
+    "deebov"
+  ],
+  "homepage": "https://github.com/deebov/forest-awesome-html-site",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "^8.0.0"
+  }
+}
