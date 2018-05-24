@@ -14,7 +14,7 @@ html(lang="en")
   body
     header.header
       .header__logo-box
-        img(src="assets/img/logo-white.png", alt="")
+        img(src="assets/img/logo-white.png", alt="").header__logo
       .header__text-box
         h1.heading-primary
           span.heading-primary--main outdoors
@@ -22,5 +22,17 @@ html(lang="en")
         a(href="#").btn.btn--white.btn--animated Discover our tours
     main
       section.section-about.section
-        .u-text-center
+        .u-text-center.u-margin-bottom-80
           h2.heading-secondary Exciting tours for adventurous people
+        .row
+          .col.col-1-of-2
+            h3.heading-tertiary.u-margin-bottom-15 You're going to fall in love with nature
+            p.paragraph Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas voluptatibus aspernatur hic eius magnam deserunt? Quaerat excepturi, officia dolor consequuntur recusandae provident explicabo officiis, deleniti ab cum in nemo ad?
+            h3.heading-tertiary.u-margin-bottom-15 You're going to fall in love with nature
+            p.paragraph Lorem ipsum dolor sit amet consectetur adipisicing elit. Vol  uptas voluptatibus aspernatur hic eius magnam deserunt? Quaerat excepturi
+            a(href="#").btn-text Learn more &rarr;
+          .col.col-1-of-2 
+            .composition
+              img(src="assets/img/nat-1-large.jpg" alt="").composition__photo.composition__photo--1
+              img(src="assets/img/nat-2-large.jpg" alt="").composition__photo.composition__photo--2 
+              img(src="assets/img/nat-3-large.jpg" alt="").composition__photo.composition__photo--3
