@@ -1,0 +1,97 @@
+$card-height: 500px
+
+.card
+  position: relative
+  height: $card-height
+  perspective: 1500px
+  &__side
+    position: absolute
+    top: 0
+    left: 0
+    transition: all .8s ease
+    height: $card-height
+    width: 100% 
+    overflow: hidden
+    backface-visibility: hidden
+    border-radius: 3px
+    box-shadow: 0 15px 40px rgba($color-black, .15)
+    &--front
+      background-color: $color-white
+    &--back
+      transform: rotateY(180deg)
+      &--1
+        background-image: linear-gradient(to right bottom, $color-yellow-light, $color-yellow-dark)
+      &--2
+        background-image: linear-gradient(to right bottom, $color-green-light, $color-green-dark)
+      &--3
+        background-image: linear-gradient(to right bottom, $color-blue-light, $color-blue-dark)
+  &:hover &__side--front
+    transform: rotateY(-180deg)
+  &:hover &__side--back
+    transform: rotateY(0)
+  &__picture
+    height: 230px
+    background-size: cover
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%)
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%)
+    border-top-left-radius: 3px
+    border-top-right-radius: 3px
+    background-blend-mode: screen
+    &--1
+      background-image: linear-gradient(to right bottom, $color-yellow-light, $color-yellow-dark), url("../img/nat-5.jpg")
+    &--2
+      background-image: linear-gradient(to right bottom, $color-green-light, $color-green-dark), url("../img/nat-6.jpg")
+    &--3
+      background-image: linear-gradient(to right bottom, $color-blue-light, $color-blue-dark), url("../img/nat-7.jpg")
+  &__heading
+    font-size: 30px
+    text-transform: uppercase
+    font-weight: 300
+    position: absolute
+    top: 100px
+    right: 10px
+    color: $color-white
+    z-index: 1
+    width: 75%
+    text-align: right
+  &__heading-span
+    padding: 10px 10px
+    -webkit-box-decoration-break: clone
+    box-decoration-break: clone
+    &--1
+      background-image: linear-gradient(to right bottom, rgba($color-yellow-light, .6), rgba($color-yellow-dark, .6))
+    &--2
+      background-image: linear-gradient(to right bottom, rgba($color-green-light, .6), rgba($color-green-dark, .6))
+    &--3
+      background-image: linear-gradient(to right bottom, rgba($color-blue-light, .6), rgba($color-blue-dark, .6))
+  &__details
+    padding: 30px
+    ul
+      width: 75%
+      margin: 0 auto  
+      list-style: none
+      li
+        text-align: center
+        font-size: 15px
+        padding-bottom: 10px
+        padding-top: 10px
+        &:not(:last-child)
+          border-bottom: 1px solid #eeeeee
+  &__cta
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 90%
+    text-align: center
+  &__price-box
+    margin-bottom: 80px
+    text-align: center
+    color: $color-white
+  &__price-title
+    text-transform: uppercase
+    font-weight: 500
+  &__price-value
+    font-size: 45px
+    font-weight: 100
+  
