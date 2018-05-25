@@ -8,7 +8,6 @@ html(lang="en")
     //- inject:css
     //- endinject
     link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900")
-    link(rel="stylesheet", href="assets/css/icon-font.css")
     link(rel="stylesheet", href="assets/css/main.css")
     link(rel="shortcut icon" type="image/png" href="assets/img/favicon.png")
   body
@@ -36,3 +35,38 @@ html(lang="en")
               img(src="assets/img/nat-1-large.jpg" alt="").composition__photo.composition__photo--1
               img(src="assets/img/nat-2-large.jpg" alt="").composition__photo.composition__photo--2 
               img(src="assets/img/nat-3-large.jpg" alt="").composition__photo.composition__photo--3
+      section.section-features.section
+        .row
+          each className in ['world', 'compass', 'map', 'heart']
+            .col.col-1-of-4
+              .feature-box
+                i(class=`icon-basic-${className} feature-box__icon`)
+                h3.heading-tertiary.feature-box__heading Elite tours around the world
+                p.paragraph.feature-box__text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero odit asperiores earum!
+
+      section.section-tours.section
+        .u-text-center.u-margin-bottom-80
+          h2.heading-secondary Exciting tours for adventurous people
+        .row
+          each cardInfo in card
+            .col.col-1-of-3 
+              .card
+                .card__side.card__side--front 
+                  div(class=`card__picture card__picture--${cardInfo.number}`)
+                  h4.card__heading 
+                    span(class=`card__heading-span card__heading-span--${cardInfo.number}`) the beatiful places 
+                  .card__details
+                    ul
+                      li 3 day tours
+                      li Up to 30 people
+                      li 2 tour guides
+                      li Sleep in cozy hotels
+                div(class=`card__side card__side--back card__side--back--${cardInfo.number}`) 
+                  .card__cta
+                    .card__price-box
+                      .card__price-title Only
+                      .card__price-value= cardInfo.price
+                    a(href="#").btn.btn--white Book now!
+        .u-text-center.u-margin-top-80
+          a(href="#").btn.btn--green Discover all tours!
+        
