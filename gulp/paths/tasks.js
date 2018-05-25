@@ -7,6 +7,7 @@ module.exports = [
   './gulp/tasks/watcher.js',
   './gulp/tasks/serve.js',
   './gulp/tasks/copy.image.js',
+  './gulp/tasks/copy.libs.js',
   './gulp/tasks/copy.bowerFiles.js',
   './gulp/tasks/inject.js',
 ];
