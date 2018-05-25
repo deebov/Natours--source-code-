@@ -7,7 +7,7 @@
     border-radius: 100px
     padding: 15px 40px
     transition: all .3s
-    -webkit-backface-visibility: hidden
+    // -webkit-backface-visibility: hidden
     position: relative
   &:hover 
     transform: translateY(-3px)
@@ -34,6 +34,11 @@
     color: $color-gray
     &::after 
       background-color: $color-white
+  &--green 
+    background-color: $color-green-medium
+    color: $color-white
+    &::after 
+      background-color: $color-green-medium
   &--animated
     animation: moveInBottom .3s ease-out .75s
     animation-fill-mode: backwards
