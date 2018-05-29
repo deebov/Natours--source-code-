@@ -69,4 +69,73 @@ html(lang="en")
                     a(href="#").btn.btn--white Book now!
         .u-text-center.u-margin-top-80
           a(href="#").btn.btn--green Discover all tours!
-        
+      section.section-stories.section
+        .bg-video
+          video(autoplay loop muted).bg-video__content
+            source(src="assets/img/video.webm" type="video/webm")
+            source(src="assets/img/video.mp4" type="video/mp4")
+        .u-text-center.u-margin-top-80
+          h2.heading-secondary.u-margin-bottom-80 We make people genuinely happy
+        .row
+         .story 
+            figure.story__shape
+              img(src="assets/img/nat-8.jpg", alt="").story__img
+              figcaption.story__caption mary smith
+            .story__text
+              h3.heading-tertiary.u-margin-bottom-15 I had the best week with my family 
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus nesciunt sunt repellat quaerat asperiores nihil.
+
+        .row
+         .story 
+            figure.story__shape
+              img(src="assets/img/nat-9.jpg", alt="").story__img
+              figcaption.story__caption john doe
+            .story__text
+              h3.heading-tertiary.u-margin-bottom-15 I had the best week with my family 
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus nesciunt sunt repellat quaerat asperiores nihil.
+        .u-text-center.u-margin-top-80
+          a(href="#").btn-text Read all stories &rarr;
+      section.section-book.section
+        .row
+          .form
+            .form__container
+              form(action="").form__form
+                .u-margin-bottom-40
+                  h2.heading-secondary Start booking now
+                .form__group
+                  input(type="text" placeholder="Full name" id="name" required).form__input
+                  label(for="name").form__label Full name
+                .form__group.u-margin-bottom-15
+                  input(type="email" placeholder="Email address" id="email" required).form__input
+                  label(for="email").form__label Email address
+                .form__radio-group.u-margin-bottom-15
+                  input(type="radio" id="radio-small" name="form-radio").form__radio-input
+                  label(for="radio-small").form__radio-label Small tour group
+                    span.form__radio-btn
+                .form__radio-group.u-margin-bottom-40
+                  input(type="radio" id="radio-big" name="form-radio").form__radio-input
+                  label(for="radio-big").form__radio-label Big tour group
+                    span.form__radio-btn
+                .form__group.u-margin-bottom-15
+                  button.btn.btn--green.form__btn-submit Next step &rarr;
+    footer.footer
+      .footer__logo-box
+        img(src="assets/img/logo-green-2x.png", alt="").footer__logo
+      .row
+        .col.col-1-of-2
+          nav.footer__navigation
+            ul.footer__list
+              li.footer__item
+                a(href="#").footer__link Company
+              li.footer__item
+                a(href="#").footer__link Contact Us
+              li.footer__item
+                a(href="#").footer__link Careers
+              li.footer__item
+                a(href="#").footer__link Privacy policy
+              li.footer__item
+                a(href="#").footer__link Terms
+        .col.col-1-of-2
+          p.footer__copyright
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto maxime neque officiis doloremque atque. Incidunt modi deleniti reiciendis recusandae maxime alias quos minima iusto, est eos enim sunt laborum ullam! 
+
