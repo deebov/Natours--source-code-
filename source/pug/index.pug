@@ -11,6 +11,33 @@ html(lang="en")
     link(rel="stylesheet", href="assets/css/main.css")
     link(rel="shortcut icon" type="image/png" href="assets/img/favicon.png")
   body
+    .navigation
+      input#nav-toggle.navigation__checkbox(type="checkbox", name="")
+      label.navigation__button(for="nav-toggle") 
+        span.navigation__icon &nbsp;
+      .navigation__background
+      nav.navigation__nav 
+        ul.navigation__list
+          li.navigation__item
+            a(href="#").navigation__link
+              span 01
+              | About Natours
+          li.navigation__item
+            a(href="#").navigation__link
+              span 02
+              | Your benefits
+          li.navigation__item
+            a(href="#").navigation__link
+              span 03
+              | Popular tours
+          li.navigation__item
+            a(href="#").navigation__link
+              span 04
+              | Stories
+          li.navigation__item
+            a(href="#").navigation__link
+              span 05
+              | Book now
     header.header
       .header__logo-box
         img(src="assets/img/logo-white.png", alt="").header__logo
@@ -44,7 +71,7 @@ html(lang="en")
                 h3.heading-tertiary.feature-box__heading Elite tours around the world
                 p.paragraph.feature-box__text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero odit asperiores earum!
 
-      section.section-tours.section
+      section.section-tours.section#section-tours
         .u-text-center.u-margin-bottom-80
           h2.heading-secondary Exciting tours for adventurous people
         .row
@@ -66,14 +93,14 @@ html(lang="en")
                     .card__price-box
                       .card__price-title Only
                       .card__price-value= cardInfo.price
-                    a(href="#").btn.btn--white Book now!
+                    a(href="#popup").btn.btn--white Book now!
         .u-text-center.u-margin-top-80
           a(href="#").btn.btn--green Discover all tours!
       section.section-stories.section
-        .bg-video
-          video(autoplay loop muted).bg-video__content
-            source(src="assets/img/video.webm" type="video/webm")
-            source(src="assets/img/video.mp4" type="video/mp4")
+        //- .bg-video
+        //-   video(autoplay loop muted).bg-video__content
+        //-     source(src="assets/img/video.webm" type="video/webm")
+        //-     source(src="assets/img/video.mp4" type="video/mp4")
         .u-text-center.u-margin-top-80
           h2.heading-secondary.u-margin-bottom-80 We make people genuinely happy
         .row
@@ -137,5 +164,16 @@ html(lang="en")
                 a(href="#").footer__link Terms
         .col.col-1-of-2
           p.footer__copyright
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto maxime neque officiis doloremque atque. Incidunt modi deleniti reiciendis recusandae maxime alias quos minima iusto, est eos enim sunt laborum ullam! 
-
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto maxime neque officiis doloremque atque. Incidunt modi deleniti reiciendis recusandae maxime alias quos minima iusto, est eos enim sunt laborum ullam!
+    .popup#popup
+      .popup__content
+        .popup__left
+          img(src="assets/img/nat-8.jpg", alt="").popup__img
+          img(src="assets/img/nat-9.jpg", alt="").popup__img
+        .popup__right
+          a(href="#section-tours").popup__close &times;
+          h2.heading-secondary.u-margin-bottom-15  Start booking now
+          h3.heading-tertiary.u-margin-bottom-15  Important &ndash; Please read these terms before booking
+          .popup__text
+            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque placeat rem quidem dignissimos exercitationem nam sequi voluptate, tenetur, explicabo similique illo vero recusandae tempora totam maiores, ut quos nulla ex atque consequatur ipsum. Expedita officia mollitia omnis animi aut doloremque quo laudantium pariatur iste eveniet, reiciendis sunt perferendis libero saepe.
+          a.btn.btn--green Book
