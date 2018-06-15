@@ -11,12 +11,20 @@
     letter-spacing: 35px
     display: block
     animation: moveInLeft 1.5s ease-out
+
+    @include respond('phone')
+      letter-spacing: 10px
+      font-size: 50px
+
   &--sub 
     font-weight: 700
     font-size: 20px
     letter-spacing: 16px
     display: block
     animation: moveInRight 1.5s ease-out
+
+    @include respond('phone')
+      letter-spacing: 5px
 
 .heading-secondary
   font-size: 35px
@@ -28,6 +36,10 @@
   color: transparent
   letter-spacing: 2px
   transition: all .2s 
+
+  @include respond('tab-port')
+    font-size: 25px
+
   &:hover
     transform: skew(15deg, 2deg) scale(1.1)
     text-shadow: 5px 10px 20px rgba($color-black, .2)

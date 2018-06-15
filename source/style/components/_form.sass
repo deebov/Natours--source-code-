@@ -1,13 +1,24 @@
 .form
   background-image: linear-gradient(105deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 50%, transparent 50%), url(../img/nat-10.jpg)
   background-size: 100%
-  height: 500px
   border-radius: 3px
   box-shadow: 0 15px 40px rgba($color-black, .15)
+
+  @include respond('tab-land')
+    background-image: linear-gradient(105deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 65%, transparent 65%), url(../img/nat-10.jpg)
+    background-size: cover
+
+  @include respond('tab-port')
+    background-image: linear-gradient(to right, rgba($color-white, .9) 0%, rgba($color-white, .9) 65%), url(../img/nat-10.jpg)
 
   &__form
     width: 50%
     padding: 60px
+    @include respond('tab-land')
+      width: 65%
+    
+    @include respond('tab-port')
+      width: 100%
   &__group:not(:last-child)
     margin-bottom: 20px
   &__input
@@ -21,6 +32,9 @@
     border-bottom: 3px solid transparent
     transition: all .2s
     border-bottom: 3px solid $color-green-medium
+
+    @include respond('tab-port')
+      width: 100%
     &:focus
       outline: none
       box-shadow: 0 10px 20px rgba($color-black, .1)
@@ -45,6 +59,9 @@
   &__radio-group
     display: inline-block
     width: 49%
+    @include respond('tab-port')
+      display: block
+      margin-bottom: 2px
   &__radio-input
     display: none
   &__radio-label

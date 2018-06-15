@@ -3,6 +3,9 @@
   padding: 250px 0
   margin-top: -20vh
 
+  @include respond('tab-port')
+    padding: 200px 0
+
 .section-features
   $skewY: 7deg
   padding: 200px 0
@@ -12,6 +15,8 @@
   margin-top: -100px
   & > * 
     transform: skewY($skewY)
+  @include respond('tab-port')
+      padding: 100px 0
 
 .section-tours
   background-color: $color-gray-light-1
@@ -19,11 +24,19 @@
   padding-bottom: 150px
   margin-top: -20vh
 
+  @include respond('tab-port')
+    padding: 200px 0 100px 0
+
 .section-stories
   position: relative
   padding: 150px 0
+
+  @include respond('tab-port')
+    padding: 100px 0
 
 .section-book
   padding: 150px 0
   background-image: linear-gradient(to right bottom, $color-green-light, $color-green-dark)
 
+  @include respond('tab-port')
+    padding: 100px 0

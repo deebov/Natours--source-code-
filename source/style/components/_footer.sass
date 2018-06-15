@@ -3,12 +3,24 @@
   padding: 100px 0
   font-size: 14px
   color: $color-gray-light-1
+
+  @include respond('tab-port')
+    padding: 80px 0
+
   &__logo-box
     text-align: center
     margin-bottom: 80px
+
+    @include respond('tab-port')
+      margin-bottom: 40px
+
   &__logo
     width: 150px
     height: auto
+
+    @include respond('tab-port')
+      width: 100px
+
   &__item
     display: inline-block
     &:not(:last-child)
@@ -17,6 +29,10 @@
     border-top: 1px solid $color-gray
     padding-top: 15px
     display: inline-block
+    @include respond('tab-port')
+      width: 100%
+      text-align: center
+
   &__link
     &:link,
     &:visited
@@ -34,3 +50,6 @@
   &__copyright
     border-top: 1px solid $color-gray
     padding-top: 15px
+    @include respond('tab-port')
+      width: 100%
+      float: none

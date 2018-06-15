@@ -1,0 +1,123 @@
+.navigation
+  &__checkbox
+    display: none
+  &__button
+    height: 70px
+    width: 70px
+    background-color: $color-white
+    position: fixed
+    top: 60px
+    right: 60px
+    z-index: 2000
+    border-radius: 50%
+    box-shadow: 0 10px 30px rgba($color-black, .15)
+
+    @include respond('tab-port')
+      top: 40px
+      right: 40px
+      
+    @include respond('phone')
+      top: 30px
+      right: 30px
+      
+
+  &__background
+    height: 60px
+    width: 60px
+    border-radius: 50%
+    position: fixed
+    top: 65px
+    right: 65px
+    z-index: 1000 
+    transition: all .8s cubic-bezier(.86, 0, .07, 1)
+    background-image: radial-gradient($color-green-light, $color-green-dark)
+
+    @include respond('tab-port')
+      top: 45px
+      right: 45px
+    @include respond('phone')
+      top: 35px
+      right: 35px
+
+  &__nav
+    height: 100vh
+    position: fixed
+    z-index: 1500
+    opacity: 0
+    visibility: hidden
+    width: 0
+    top: 0
+    left: 0
+    transition: all .8s cubic-bezier(.68, -.55, .265, 1.55)
+    white-space: nowrap
+  &__list
+    @include centered()
+    list-style-type: none
+    text-align: center
+  &__item
+    margin: 10px
+  &__link
+    &:link,
+    &:visited
+      text-transform: uppercase
+      display: inline-block
+      font-size: 30px
+      color: $color-white
+      text-decoration: none
+      font-weight: 300
+      padding: 10px 20px
+      background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%)
+      background-size: 220%
+      transition: all .4s
+      span
+        margin-right: 15px
+        display: inline-block
+    &:hover,
+    &:active
+      background-position: 100%
+      color: $color-green-medium
+      transform: translateX(10px)
+  &__button
+    cursor: pointer
+    text-align: center
+  &__checkbox:checked ~ &__background
+    transform: scale(80)
+  &__checkbox:checked ~ &__nav
+    width: 100%
+    opacity: 1
+    visibility: visible
+  &__icon
+    // position: relative
+    @include centered()
+    transition: all .3s
+    &,
+    &::before,
+    &::after
+      width: 30px
+      height: 2px
+      background-color: $color-gray-dark
+      display: inline-block
+    &::before,
+    &::after
+      content: ""
+      position: absolute
+      left: 0
+      transition: all .2s
+    &::after
+      top: -8px
+    &::before
+      top: 8px 
+
+  &__button:hover &__icon::after
+      top: -10px  
+  &__button:hover &__icon::before
+      top: 10px  
+
+  &__checkbox:checked ~ &__button &__icon
+    background-color: transparent
+  &__checkbox:checked ~ &__button &__icon::before
+    transform: rotate(-135deg)
+    top: 0
+  &__checkbox:checked ~ &__button &__icon::after
+    transform: rotate(135deg) 
+    top: 0
