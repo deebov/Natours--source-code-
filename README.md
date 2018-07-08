@@ -1,5 +1,5 @@
 ## Natours - responsive and cross-browser HTML web site
-## Demo | Live demo
+## Demo | [Live Demo](https://deebov.github.io/Natours/)
 
 ### How to install
 You should install Node.js. If you already have it then just clone this repository and write this command below at the console in the resository directory
