@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "gulp": "gulp",
-    "nodemonGulp": "nodemon --exec \"gulp\" --watch ./gulpfile.js --watch ./gulp/"
+    "dev": "nodemon --exec \"gulp --dev\" --watch ./gulpfile.js --watch ./gulp/"
   },
   "keywords": [
     "pug",
@@ -24,12 +24,15 @@
     "gulp-autoprefixer": "^5.0.0",
     "gulp-css-unit": "^1.2.2",
     "gulp-csso": "^3.0.1",
+    "gulp-if": "^2.0.2",
     "gulp-inject": "^4.3.2",
     "gulp-load-plugins": "^1.5.0",
     "gulp-notify": "^3.2.0",
     "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.0.1",
     "gulp-sass-glob": "^1.0.9",
-    "main-bower-files": "^2.13.1"
-  }
+    "main-bower-files": "^2.13.1",
+    "yargs": "^11.0.0"
+  },
+  "dependencies": {}
 }

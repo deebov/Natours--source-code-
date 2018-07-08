@@ -8,6 +8,7 @@ global.$ = {
   gulp: require('gulp'),
   browserSync: require('browser-sync').create(),
   gp: require('gulp-load-plugins')(),
+  argv: require('yargs').argv,
   del: require('del'),
   bowerFiles: require('main-bower-files')
 };
@@ -15,6 +16,7 @@ global.$ = {
 $.path.task.forEach(function(task) {
   require(task)();
 });
+
 
 $.gulp.task('default', $.gulp.series(
   'clean',

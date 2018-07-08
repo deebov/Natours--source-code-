@@ -9,6 +9,7 @@
   padding-left: 80px
   @include clearfix
   transform: skewX(-$skewX-value)
+  -webkit-backface-visibility: hidden 
   backface-visibility: hidden 
 
   @include respond('tab-port')
@@ -23,20 +24,26 @@
     width: 150px
     height: 150px
     float: left
-    -webkit-shape-outside: circle(50% at 50% 50%)
-    shape-outside: circle(50% at 50% 50%)
-    -webkit-clip-path: circle(50% at 50% 50%)
-    clip-path: circle(50% at 50% 50%)
     transform: translateX(-30px) skewX($skewX-value)
     position: relative
+    overflow: hidden
+    border-radius: 50%
+    @supports (clip-path: circle(50% at 50% 50%)) or (-webkit-clip-path: circle(50% at 50% 50%))
+      -webkit-shape-outside: circle(50% at 50% 50%)
+      shape-outside: circle(50% at 50% 50%)
+      -webkit-clip-path: circle(50% at 50% 50%)
+      clip-path: circle(50% at 50% 50%)
+      border-radius: none
     @include respond('phone')
      transform: translateX(-30px) skewX(0)
   &__img
     height: 100%
     transform: translateX(-30px) scale(1.3)
+    -webkit-backface-visibility: hidden 
     backface-visibility: hidden 
     transition: all .3s ease
   &__text
+    -webkit-backface-visibility: hidden 
     backface-visibility: hidden 
     transform: skewX($skewX-value)
     @include respond('phone')
